@@ -315,7 +315,8 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
 
   @override
   void dispose() {
-    value.webViewController?.dispose();
+    // downgrade flutter_inappwebview: 5.8.0
+    //value.webViewController?.dispose();
     super.dispose();
   }
 }
